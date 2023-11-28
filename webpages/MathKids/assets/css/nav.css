@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Rubik&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;900&display=swap');
+/* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}*/
+
+body {
+    font-family: 'Poppins', 'Work Sans', sans-serif;
+}
+
+.Nav-bar {
+    display: flex;
+    background-color: #33BBC5;
+    /* overflow: hidden; */ /*will cut the content of dropdown list*/
+    max-height: 100px;
+
+    align-items: center; /* Vertically center the content */
+    
+    /*NEW ADDED*/
+    width: 100%; 
+    z-index: 9999;
+    position: absolute;
+
+    /* border-radius: 0px 0px 50px 50px; */
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    padding: 0 20px; /* Adjust horizontal padding */
+    justify-content: flex-end; /* Move links to the right */
+    align-items: center; /* Vertically center the links */
+    flex-grow: 1; /* Allow links to take remaining space */
+    
+}
+
+.nav_links a {
+    font-size: 22px;
+    font-weight: 800;
+
+
+    /*  spacing */
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.3131s ease-in-out, transform 0.3131s ease-in-out; /* Apply transition to font size and transform */
+}
+
+.nav_links a:hover {
+    font-size: 25px;
+    font-weight: 1000; /* Slightly bolder on hover */
+    background-color: #85E6C5; /* Add a background color on hover */
+    border-radius: 5px; /* Add rounded corners to the background */
+    transform: scale(1.31); /* Scale effect on hover */
+}
+
+/* Add styles for the dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #33BBC5; /* Dropdown background color */
+    min-width: 160px; /* Set the width of the dropdown menu */
+    max-width: 191px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Dropdown box shadow */
+    z-index: 9999; /* Ensure the dropdown appears above other elements */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown menu on hover */
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.dropdown-content li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #85E6C5; /* Background color on hover */
+    border-radius: 5px;
+}
+
+/*.logo {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 750;
+
+    /* text gradient */
+
+    /* linear gradient variation */
+    /* background: -webkit-linear-gradient(#eee, #333); */
+
+    /* repeated linear gradient variation */
+    /* background: repeating-linear-gradient(angle | to side-or-corner, color-stop1, color-stop2, ...); 
+    background: -webkit-linear-gradient(-45deg, #f7f9ff, #d4e0f8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 100px;
+    /*this one is for the image logo 
+    max-width: 130px;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    margin-right: auto; /*Push logo to the left side 
+}*/
+
+
+.logo:hover {
+    transition: background 2.5s ease-in-out;
+    background: -webkit-linear-gradient(-45deg, #d7e8f2, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.active
+{
+    filter: brightness(80%);
+}

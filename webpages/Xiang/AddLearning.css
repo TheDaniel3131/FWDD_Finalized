@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Rubik&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Work Sans', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.Nav-bar {
+    display: flex;
+    background-color: #33BBC5;
+    max-height: 100px;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    /* position: fixed; Added to fix the nav bar at the top */
+    top: 0;
+    left: 0;
+    right: 0; /* Ensures the nav bar spans the entire width */
+    z-index: 1; /* Keeps the nav bar above other content */    
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    padding: 0 20px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav_links a {
+    font-size: 22px;
+    font-weight: 800;
+    padding: 10px 20px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.3131s ease-in-out, transform 0.3131s ease-in-out;
+}
+
+.nav_links a:hover {
+    font-size: 25px;
+    font-weight: 1000;
+    background-color: #85E6C5;
+    border-radius: 5px;
+    transform: scale(1.31);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #33BBC5;
+    min-width: 160px;
+    max-width: 191px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #85E6C5;
+    border-radius: 5px;
+}
+
+/* Styling for the menu icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}   
+
+.logo {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 750;
+    background: -webkit-linear-gradient(-45deg, #f7f9ff, #d4e0f8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 100px;
+    padding: 0 50px;
+    margin-right: auto;
+}
+
+.logo:hover {
+    transition: background 2.5s ease-in-out;
+    background: -webkit-linear-gradient(-45deg, #d7e8f2, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Style for the Login button */
+.login-button {
+    background-color: #007bff; /* Blue background */
+    color: white;             /* White text */
+    width: 200px; 
+    padding: 10px 30px;       /* Increased padding for longer button */
+    text-align: center;       /* Center the text inside */
+    text-decoration: none;    /* Remove underline from the text */
+    display: inline-block;    /* Allow setting padding and margins */
+    font-size: 16px;          /* Size of the font */
+    margin: 4px 2px;          /* Margin around the button */
+    transition-duration: 0.2s;/* Time for the hover effect transition */
+    transition: all 0.2 ease;
+    cursor: pointer;          /* Change cursor to pointer on hover */
+    border: none;             /* Remove any default border */
+    border-radius: 25px;       /* Rounded corners */
+}
+
+/* Move nav links to the left when the Login button is hovered */
+.login-button:hover + .nav_links {
+    transform: translateX(-10px); /* Adjust the value as needed */
+    transition: transform 0.2s ease;
+}
+
+/* Specific hover effect for the Login button */
+.nav_links .login-button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+    border-radius: 35px;       /* Rounded corners */
+    transform: scale(1.05);    /* Slightly zoom out */
+}
+
+/* Media query for screens with a maximum width of 1063 pixels */
+@media (max-width: 1065px) {
+    .nav_links a {
+        font-size: 18px; /* Smaller font size for nav links */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon */
+        padding: 20px; /* Add some padding */
+    }
+
+    .nav_links {
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: #33BBC5;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav_links a {
+        font-size: 18px;
+        padding: 10px 0;
+        display: block; /* Ensures links take full width */
+    }
+
+    .logo {
+        padding: 0 20px; /* Adjust padding for smaller screens */
+        font-size: 30px; /* Smaller font size for the logo */
+        line-height: normal; /* Adjust line height for smaller logo */
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 550px;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.Title {
+    width: 300px;
+    height: 30px;
+}
+
+.text {
+    width: 600px;
+    height: 30px;
+}
+
+.textarea {
+    width: 600px;
+    height: 800px;
+    border-radius: 10px;
+    border: 1px black solid;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.textAREA {
+    width: 600px;
+    height: 800px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px black solid;
+    padding: 5px;
+}
+
+.buttonstore {
+    margin: 0;
+    background-color: lightgrey;
+    width: 600px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid black;
+}
+
+.buttonstore button {
+    border: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin: 0;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.buttonstore button:hover {
+    background-color: grey;
+}
+
+
+#Submit {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #33BBC5;
+    color: white;
+    cursor: pointer;
+}
+
+.box {
+    border: 1px solid black
+}
+
+#InsertPara {
+    color: white;
+    background-color: #33BBC5;
+    border: 0;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.Middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}

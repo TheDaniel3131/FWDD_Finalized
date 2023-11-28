@@ -1,0 +1,10 @@
+For students:
+- course.php 
+
+For teachers:
+- course2.php
+- addevent 
+- addcourse 
+
+use course.php instead of course.html for student course page.
+all files use the same css file - course.css
